@@ -1,128 +1,132 @@
-    <h1>Privacy and Cookie Policy</h1>
-    <div><strong>Effective Date:</strong> October 1, 2025 </div>
+{% extends 'layout.html' %}
+{% block title %}Privacy and Cookie Policy{% endblock %}
+{% block main %}
+<h1>Privacy and Cookie Policy</h1>
+<p><mark>Effective Date:</mark> October 1, 2025 </p>
 
-    <h2>1. Introduction</h2>
-    <div>Welcome to <strong>{{ site.WebsiteName }}</strong>. We are
-        committed to protecting your privacy. This policy explains how we collect, use, and protect your limited
-        personal information and how we use cookies.</div>
-    <div>We only process personal data that is <strong>strictly
-            necessary</strong> for the basic functioning of our website and to provide the service you
-        have requested, specifically to keep you logged in.</div>
+<h2>1. Introduction</h2>
+<p>Welcome to <mark>{{ site.WebsiteName }}</mark>. We are
+    committed to protecting your privacy. This policy explains how we collect, use, and protect your limited
+    personal information and how we use cookies.</p>
+<p>We only process personal data that is <mark>strictly
+        necessary</mark> for the basic functioning of our website and to provide the service you
+    have requested, specifically to keep you logged in.</p>
 
-    <h2>2. Who We Are (Data Controller)</h2>
-    <div><strong>{{ site.ControllerName }}</strong> is the
-        data controller responsible for the personal information collected on this website.</div>
-    <ul>
-        <li><strong>Our Contact
-                    Details:</strong> {{ site.ControllerAddress }}</li>
-        <li><strong>Our Website
-                    Address:</strong><a href="{{ site.ControllerURL }}">{{ site.ControllerURL }}</a></li>
-    </ul>
+<h2>2. Who We Are (Data Controller)</h2>
+<p><mark>{{ site.ControllerName }}</mark> is the
+    data controller responsible for the personal information collected on this website.</p>
+<ul>
+    <li><mark>Our Contact
+            Details:</mark> {{ site.ControllerAddress }}</li>
+    <li><mark>Our Website
+            Address:</mark><a href="{{ site.ControllerURL }}">{{ site.ControllerURL }}</a></li>
+</ul>
 
-    <h2>3. The Information We Collect</h2>
-    <div>We collect very limited personal information
-        when you log in using your GitHub or Google account:</div>
-    <ul>
-        <li>
-            <strong>Google/GitHub User
-                    ID:</strong> When you log in using the third-party authentication service (Google or
-                GitHub), we retrieve your user name and ID number and store only your unique user ID number. This is a persistent identifier provided
-                by the third party.
-        </li>
-        <li>
-            <strong>Session Data:</strong> We use a session cookie to maintain your logged-in status. This cookie
-                itself stores a secure, random string (session ID) that links back to your user ID & name on our server. The
-                data is only stored for the duration of your visit (session).
-        </li>
+<h2>3. The Information We Collect</h2>
+<p>We collect very limited personal information
+    when you log in using your GitHub or Google account:</p>
+<ul>
+    <li>
+        <mark>Google/GitHub User
+            ID:</mark> When you log in using the third-party authentication service (Google or
+        GitHub), we retrieve your user name and ID number and store only your unique user ID number. This is a
+        persistent identifier provided
+        by the third party.
+    </li>
+    <li>
+        <mark>Session Data:</mark> We use a session cookie to maintain your logged-in status. This cookie
+        itself stores a secure, random string (session ID) that links back to your user ID & name on our server. The
+        data is only stored for the duration of your visit (session).
+    </li>
 
-    </ul>
-    <div>We <strong>do not</strong> collect your
-        name, email address, profile picture, location, or any other personal details unless explicitly stated
-        here.</div>
+</ul>
+<p>We <mark>do not</mark> collect your
+    name, email address, profile picture, location, or any other personal details unless explicitly stated
+    here.</p>
 
-    <h2>4. How We Use Your Information</h2>
-    <div>We use the collected information for the
-        following purposes:</div>
-    <ul>
-        <li>
-            <strong>Authentication:</strong> To verify your identity when you log in
-                and to keep you securely logged in as you navigate the website.
-        </li>
-        <li>
-            <strong>Service Provision:</strong> To provide you with access to features and content available only
-                to logged-in users.
-        </li>
-        <li>
-            <strong>Security:</strong> To enhance the security of our website and
-                protect against unauthorised access.
-        </li>
-    </ul>
-    <div>We do not use your information for marketing,
-        analytics, or any other non-essential purpose.</div>
+<h2>4. How We Use Your Information</h2>
+<p>We use the collected information for the
+    following purposes:</p>
+<ul>
+    <li>
+        <mark>Authentication:</mark> To verify your identity when you log in
+        and to keep you securely logged in as you navigate the website.
+    </li>
+    <li>
+        <mark>Service Provision:</mark> To provide you with access to features and content available only
+        to logged-in users.
+    </li>
+    <li>
+        <mark>Security:</mark> To enhance the security of our website and
+        protect against unauthorised access.
+    </li>
+</ul>
+<p>We do not use your information for marketing,
+    analytics, or any other non-essential purpose.</p>
 
-    <h2>5. Third-Party Data Sharing</h2>
-    <div>We use a third-party service for
-        authentication:</div>
-    <ul>
-        <li>
-            <strong>GitHub/Google:</strong> When you log in, you interact with their
-                services. They provide us with your unique user ID. Please review the GitHub Privacy
-                    Statement or Google Privacy Policy for details on
-                how they handle your data.
-        </li>
-    </ul>
-    <div>We do not share your information with any other
-        third parties.</div>
+<h2>5. Third-Party Data Sharing</h2>
+<p>We use a third-party service for
+    authentication:</p>
+<ul>
+    <li>
+        <mark>GitHub/Google:</mark> When you log in, you interact with their
+        services. They provide us with your unique user ID. Please review the GitHub Privacy
+        Statement or Google Privacy Policy for details on
+        how they handle your data.
+    </li>
+</ul>
+<p>We do not share your information with any other
+    third parties.</p>
 
-    <h2>6. Our Cookie Policy</h2>
-    <div>We only use <strong>strictly
-            necessary</strong> session cookies that are essential for the website to function
-        correctly.</div>
-    <ul>
-        <li>
-            <strong>What are
-                    cookies?</strong> Cookies are small text files placed on your device (computer or
-                smartphone) when you visit our website.
-        </li>
-        <li>
-            <strong>What we
-                    use:</strong> We use a single session cookie to manage your login state. This cookie is temporary
-                and is automatically deleted when you close your web browser.
-        </li>
-        <li><strong>No Consent Required:</strong> Under EU and UK data protection
-                law (GDPR and the ePrivacy Directive), cookies that are strictly necessary for the provision of a
-                service explicitly requested by the user do not require prior consent. You can still manage or block
-                cookies via your browser settings, but please note that the website will not function correctly if you
-                block essential session cookies.</li>
-    </ul>
-    
-    <h2>7. Your Data Protection Rights</h2>
-    <div>Under GDPR and UK data protection law, you have
-        rights regarding your personal information. You can usually exercise these rights by contacting us at the email
-        address provided above. Your rights include:</div>
-    <ul>
-        <li>
-            <strong>The right to be
-                    informed:</strong> You have the right to be informed about how we use your
-                information (which is the purpose of this policy).
-        </li>
-        <li>
-            <strong>The right to
-                    access:</strong> You have the right to access the personal information we hold about
-                you.
-        </li>
-        <li>
-            <strong>The right to
-                    erasure:</strong> You have the right to ask us to delete the personal information we
-                hold about you.
-        </li>
-    </ul>
-    <div>If you are a user in the EU or UK, you also
-        have the right to lodge a complaint with your local data protection supervisory authority, such as the 
-           UK Information Commissioner's Office (ICO) if you believe we
-        have not handled your information correctly.</div>
-    
-    <h2>8. Updates to this Policy</h2>
-    <div>We may update this policy from time to time.
-        The latest version will always be posted on this page.</div>
-    
+<h2>6. Our Cookie Policy</h2>
+<p>We only use <mark>strictly
+        necessary</mark> session cookies that are essential for the website to function
+    correctly.</p>
+<ul>
+    <li>
+        <mark>What are
+            cookies?</mark> Cookies are small text files placed on your device (computer or
+        smartphone) when you visit our website.
+    </li>
+    <li>
+        <mark>What we
+            use:</mark> We use a single session cookie to manage your login state. This cookie is temporary
+        and is automatically deleted when you close your web browser.
+    </li>
+    <li><mark>No Consent Required:</mark> Under EU and UK data protection
+        law (GDPR and the ePrivacy Directive), cookies that are strictly necessary for the provision of a
+        service explicitly requested by the user do not require prior consent. You can still manage or block
+        cookies via your browser settings, but please note that the website will not function correctly if you
+        block essential session cookies.</li>
+</ul>
+
+<h2>7. Your Data Protection Rights</h2>
+<p>Under GDPR and UK data protection law, you have
+    rights regarding your personal information. You can usually exercise these rights by contacting us at the email
+    address provided above. Your rights include:</p>
+<ul>
+    <li>
+        <mark>The right to be
+            informed:</mark> You have the right to be informed about how we use your
+        information (which is the purpose of this policy).
+    </li>
+    <li>
+        <mark>The right to
+            access:</mark> You have the right to access the personal information we hold about
+        you.
+    </li>
+    <li>
+        <mark>The right to
+            erasure:</mark> You have the right to ask us to delete the personal information we
+        hold about you.
+    </li>
+</ul>
+<p>If you are a user in the EU or UK, you also
+    have the right to lodge a complaint with your local data protection supervisory authority, such as the
+    UK Information Commissioner's Office (ICO) if you believe we
+    have not handled your information correctly.</p>
+
+<h2>8. Updates to this Policy</h2>
+<p>We may update this policy from time to time.
+    The latest version will always be posted on this page.</p>
+{% endblock %}

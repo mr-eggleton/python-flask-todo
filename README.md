@@ -36,6 +36,12 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
+
+##  Run
+
+```flask run```
+
+
 ## Explain .env
 
 Set up a APP_SECRET_KEY

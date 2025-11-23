@@ -1,0 +1,64 @@
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --void-bg-color: #c5afc7;
+    --primary-color: black;
+    --primary-bg-color: white;
+    --secondary-color: black;
+    --secondary-bg-color: #bc8dc0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --void-bg-color: black;
+    --primary-color: white;
+    --primary-bg-color: black;
+    --secondary-color: lightgray;
+    --secondary-bg-color: white;
+  }
+}
+
+body {
+  color: var(--primary-color);
+  background-color: var(--void-bg-color);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr minmax(1fr, 1080px) 1fr;
+  grid-template-areas:
+    "header header header"
+    ".      main   ."
+    "footer footer footer";
+  min-height: 100vh;
+}
+
+main {
+  grid-area: main;
+  color: var(--primary-color);
+  background-color: var(--primary-bg-color);
+}
+
+
+header,
+footer {
+  color: var(--secondary-color);
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+header {
+  grid-area: header;
+  max-height: 100px;
+}
+
+footer {
+  grid-area: footer;
+  max-height: 100px;
+}

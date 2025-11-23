@@ -1,4 +1,3 @@
-
 import os
 from flask import Flask, render_template, request, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -12,7 +11,6 @@ SITE={
         "ControllerURL": "https://www.utcsheffield.org.uk/olp/",
         }
     
-
 app = Flask(__name__)
 app.secret_key = os.getenv("APP_SECRET_KEY", "supersecret")
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///todo.db')
@@ -23,6 +21,10 @@ db = SQLAlchemy(app)
 # OAuth Blueprints
 github_bp = make_github_blueprint(client_id=os.getenv("GITHUB_CLIENT_ID"), client_secret=os.getenv("GITHUB_CLIENT_SECRET"))
 app.register_blueprint(github_bp, url_prefix="/login")
+
+@app.context_processor
+def inject_dict_for_all_templates():
+    return {"site": SITE}
 
 @dataclass
 class Todo(db.Model):
@@ -64,7 +66,7 @@ def home():
 @app.route('/privacy')
 def privacy():
     user = get_current_user()
-    return render_template('privacy.html', site=SITE, user=user)
+    return render_template('privacy.html', user=user)
 
 @app.route('/add', methods=['POST'])
 def add():
