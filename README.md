@@ -34,7 +34,7 @@ cp .env.example .env
 
 ## Run
 
-```flask run```
+```python -m flask run```
 
 ## Explain .env
 
